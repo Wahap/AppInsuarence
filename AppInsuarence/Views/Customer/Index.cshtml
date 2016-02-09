@@ -1,0 +1,101 @@
+﻿<html data-ng-app="InsModule">
+@{
+    ViewBag.Title = "Manage Customer";
+}
+
+<body>
+    <table id="tblContainer" data-ng-controller="Ins_OperController">
+        <tr>
+            <td>
+                <table style="border: solid 2px Green; padding: 5px;">
+                    <tr style="height: 30px; background-color: skyblue; color: maroon;">
+                        <th></th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Age</th>
+
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tbody data-ng-repeat="cus in Customers">
+                        <tr>
+                            <td></td>
+                            <td><span>{{cus.CustomerID}}</span></td>
+                            <td><span>{{cus.Name}}</span></td>
+                            <td><span>{{cus.Surname}}</span></td>
+                            <td><span>{{cus.Age}}</span></td>
+
+                            <td>
+                                <input type="button" id="Edit" value="Edit" data-ng-click="get(cus)" />
+                            </td>
+
+                            <td>
+                                <input type="button" id="Delete" value="Delete" data-ng-click="delete(cus)" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="color: red;">{{Message}}</div>
+                <table style="border: solid 4px Red; padding: 2px;">
+                    <tr>
+                        <td></td>
+                        <td>
+                            <span>Customer ID</span>
+                        </td>
+                        <td>
+                            <input type="text" id="CustomerID" readonly="readonly" data-ng-model="CustomerID" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <span>Customer Name</span>
+                        </td>
+                        <td>
+                            <input type="text" id="Name" required data-ng-model="Name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <span>Age</span>
+                        </td>
+                        <td>
+                            <input type="text" id="sAge" required data-ng-model="Age" />
+                        </td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="button" id="save" value="Save" data-ng-click="save()" />
+
+                            <input type="button" id="Clear" value="Clear" data-ng-click="clear()" />
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-route.js"></script>
+
+
+<script src="~/Scripts/AngularScripts/Module.js"></script>
+<script src="~/Scripts/AngularScripts/Service.js"></script>
+<script src="~/Scripts/AngularScripts/Controller.js"></script>

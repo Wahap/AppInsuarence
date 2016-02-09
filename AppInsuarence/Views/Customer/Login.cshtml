@@ -1,0 +1,135 @@
+﻿<html data-ng-app="InsModule">
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<body data-ng-controller="Ins_OperController">
+<span ng-show="custom">
+
+        <table id="tblLogin">
+            <tr></tr>
+            <tr>
+                <td>
+                    <div style="color: red;">{{Message}}</div>
+                    <table  >
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span>User Name</span>
+                            </td>
+                            <td>
+                                <input type="text" id="UserName" required data-ng-model="UserName" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span>Password</span>
+                            </td>
+                            <td>
+                                <input type="text" id="Password" required data-ng-model="Password" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input type="button" id="check" value="Login" data-ng-click="login()" />
+
+                                <button ng-click="toggleCustom()">New User</button>
+                               
+                              
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+
+        </table>
+
+    </span>
+
+    <span ng-hide="custom">
+        <table id="tblNew">
+            <tr></tr>
+            <tr>
+                <td>
+                    <div style="color: red;">{{Message}}</div>
+                    <table >
+
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span>Name</span>
+                            </td>
+                            <td>
+                                <input type="text" id="Name" required data-ng-model="Name" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span>Surname</span>
+                            </td>
+                            <td>
+                                <input type="text" id="Surname" required data-ng-model="Surname" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span>User Name</span>
+                            </td>
+                            <td>
+                                <input type="text" id="UserName" required data-ng-model="UserName" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <span>Password</span>
+                            </td>
+                            <td>
+                                <input type="text" id="Password" required data-ng-model="Password" />
+                            </td>
+                        </tr>
+
+
+
+
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <input type="button" id="save" value="Save" data-ng-click="save()" />
+
+                                <input type="button" id="Clear" value="Clear" data-ng-click="clear()" />
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+
+        </table>
+    </span>
+
+
+
+
+</body>
+</html>
+
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-route.js"></script>
+
+
+<script src="~/Scripts/AngularScripts/Module.js"></script>
+<script src="~/Scripts/AngularScripts/Service.js"></script>
+<script src="~/Scripts/AngularScripts/Controller.js"></script>

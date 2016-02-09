@@ -1,0 +1,88 @@
+﻿<html data-ng-app="InsModule">
+@{
+    ViewBag.Title = "Manage Quote";
+}
+<body>
+    <table id="tblContainer" data-ng-controller="Ins_QuoteController">
+        <tr>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="color: red;">{{Message}}</div>
+                <table style="border: solid 4px padding: 2px;">
+                    <tr>
+                        <td>
+                            <input type="hidden" id="CustomerID" data-ng-model="CustomerID" value="2" />
+                        </td>
+                        <td>
+                            <span>Insuarence Type</span>
+                        </td>
+
+                        <td>
+                            <input type="text" id="InsuarenceType" data-ng-model="InsuarenceType" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <span>Location</span>
+                        </td>
+                        <td>
+                            <input type="text" id="Location" required data-ng-model="Location" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <span>Total Insuarence Year</span>
+                        </td>
+                        <td>
+                            <input type="text" id="TotalInsuarenceYear" required data-ng-model="TotalInsuarenceYear" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <span>Cover Amound Ranger</span>
+                        </td>
+                        <td>
+                            <input type="text" id="CoverAmountRange" required data-ng-model="CoverAmountRange" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <span>Age</span>
+                        </td>
+                        <td>
+                            <input type="text" id="Age" required data-ng-model="Age" />
+                        </td>
+                    </tr>
+
+
+
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="button" id="save" value="Save" data-ng-click="save()" />
+
+                            <input type="button" id="Clear" value="Clear" data-ng-click="clear()" />
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+
+    </table>
+</body>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-route.js"></script>
+<script src="~/Scripts/AngularScripts/Module.js"></script>
+<script src="~/Scripts/AngularScripts/Quote/Service.js"></script>
+<script src="~/Scripts/AngularScripts/Quote/Controller.js"></script>
